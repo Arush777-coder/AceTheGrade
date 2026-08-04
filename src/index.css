@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", "Inter", sans-serif;
+}
+
+/* Custom scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Blinking Pop-Up Animation */
+@keyframes blink-popup {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.6);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+    box-shadow: 0 0 45px rgba(16, 185, 129, 0.95);
+  }
+}
+
+.animate-blink-popup {
+  animation: blink-popup 1.2s infinite ease-in-out;
+}
+

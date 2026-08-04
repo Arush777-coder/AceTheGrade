@@ -1,0 +1,6 @@
+{
+  "name": "AceTheGrade",
+  "description": "Premium study materials, cheat sheets, and subject-wise study kits for students across India (Classes 9-12).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
