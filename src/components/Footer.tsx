@@ -66,7 +66,15 @@ export default function Footer() {
                 <strong>HQ Address:</strong> AceTheGrade Learning Private Ltd, Sector 62, Noida, Uttar Pradesh, 201301.
               </li>
               <li>
-                <strong>Support Desk:</strong> acethegrade77@gmail.com
+                <strong>Support Desk:</strong>{' '}
+                <a
+                  href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Support Desk Inquiry')}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-blue-400 underline transition-colors"
+                >
+                  acethegrade77@gmail.com
+                </a>
               </li>
               <li>
                 <strong>Hours:</strong> Mon – Sat: 9:00 AM – 7:00 PM IST

@@ -93,7 +93,12 @@ export default function FAQ() {
             Still have questions about ordering? Speak directly with our student support experts.
           </p>
           <div className="mt-3 flex flex-all justify-center items-center gap-4 flex-wrap text-sm font-bold text-blue-600">
-            <a href="mailto:acethegrade77@gmail.com" className="flex items-center gap-1.5 hover:underline">
+            <a
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Support / Student Inquiry')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 hover:underline"
+            >
               ✉️ Customer Care: acethegrade77@gmail.com
             </a>
           </div>

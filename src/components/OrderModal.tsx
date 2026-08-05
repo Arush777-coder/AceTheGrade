@@ -540,7 +540,15 @@ export default function OrderModal({
                     )}
                   </label>
                   <p className="text-[11px] text-slate-600 font-medium leading-snug">
-                    Please make payment on UPI ID: <strong className="text-indigo-700 font-black">vaish123cbse@okhdfcbank</strong> and upload your payment screenshot here. Customers are also requested to email their payment screenshot, UPI sender name, and UTR number to <a href="mailto:acethegrade77@gmail.com" className="text-indigo-700 font-extrabold underline">acethegrade77@gmail.com</a>.
+                    Please make payment on UPI ID: <strong className="text-indigo-700 font-black">vaish123cbse@okhdfcbank</strong> and upload your payment screenshot here. Customers are also requested to email their payment screenshot, UPI sender name, and UTR number to{' '}
+                    <a
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent(`[AceTheGrade Payment Proof] ${formData.studentName || 'Student'} (${formData.email || 'Order Inquiry'})`)}&body=${encodeURIComponent(`Hello AceTheGrade Team,\n\nI have completed the payment for my order on AceTheGrade.\n\nStudent Name: ${formData.studentName}\nClass: Class ${formData.selectedClass}th (${formData.board})\nTextbook: ${formData.selectedSubjectBookName}\nPhone: ${formData.parentPhone}\nEmail: ${formData.email}\nUPI Sender Name: ${upiName || '(Enter UPI Name)'}\nUTR Number: ${utr || '(Enter 12-Digit UTR)'}\nTotal Paid: ₹${totalCost}\n\nPlease check my payment screenshot attached.\n\nThank you!`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-indigo-700 font-extrabold underline hover:text-indigo-900"
+                    >
+                      acethegrade77@gmail.com
+                    </a>.
                   </p>
 
                   {receiptPreview ? (

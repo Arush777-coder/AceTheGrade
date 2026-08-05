@@ -36,10 +36,15 @@ export default function Header({ onOrderClick }: HeaderProps) {
             Designed by Senior Board Examiners for CBSE / NCERT Curriculum
           </span>
           <span className="hidden md:inline text-slate-600">|</span>
-          <span className="flex items-center gap-1 font-heading text-slate-300">
+          <a
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Customer Care Inquiry')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1 font-heading text-slate-300 hover:text-blue-400 transition-colors"
+          >
             <Mail className="h-3.5 w-3.5 text-blue-400" />
-            Customer Care: acethegrade77@gmail.com
-          </span>
+            <span>Customer Care: acethegrade77@gmail.com</span>
+          </a>
         </div>
       </div>
 
@@ -178,7 +183,14 @@ export default function Header({ onOrderClick }: HeaderProps) {
             
             {/* Quick Contact Line */}
             <div className="pt-3 text-center">
-              <p className="text-xs text-slate-400 font-medium">Customer Care: acethegrade77@gmail.com</p>
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Customer Care Inquiry')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-slate-400 font-medium hover:text-blue-400 underline transition-colors"
+              >
+                Customer Care: acethegrade77@gmail.com
+              </a>
             </div>
           </div>
         </div>
