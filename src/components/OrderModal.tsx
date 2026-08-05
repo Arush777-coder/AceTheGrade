@@ -261,9 +261,12 @@ export default function OrderModal({
           <div className="px-6 py-6 max-h-[75vh] overflow-y-auto">
             
             {/* Top Required Payment Instruction Banner */}
-            <div className="mb-5 rounded-2xl bg-amber-50 border-2 border-amber-400 p-4 shadow-sm text-center">
+            <div className="mb-5 rounded-2xl bg-amber-50 border-2 border-amber-400 p-4 shadow-sm text-left sm:text-center space-y-1">
               <p className="text-xs sm:text-sm font-extrabold text-amber-950 leading-relaxed">
-                Please make the payment on the UPI ID- vaish123cbse@okhdfcbank before filling the form and take a screenshot of it to upload in the form.
+                Please make payment on UPI ID: <strong className="text-indigo-800 underline font-black">vaish123cbse@okhdfcbank</strong> before submitting.
+              </p>
+              <p className="text-[11px] font-bold text-amber-900 leading-normal">
+                ⚠️ <span className="underline">Cheat Sheet Delivery Requirement</span>: Customers must send their order details & payment proof to <strong className="font-extrabold text-indigo-900">acethegrade77@gmail.com</strong> for digital cheat sheet delivery.
               </p>
             </div>
 
@@ -1038,18 +1041,41 @@ export default function OrderModal({
               <CheckCircle className="h-10 w-10 text-emerald-600" />
             </div>
 
-            <h3 className="font-heading text-2xl font-black text-slate-900 tracking-tight mb-2">
-              Your Kit has Been Ordered!
+            <h3 className="font-heading text-2xl font-black text-slate-900 tracking-tight mb-1">
+              Your Order is Submitted!
             </h3>
 
-            <div className="my-3 rounded-xl bg-emerald-50 border border-emerald-200 py-3 px-4">
-              <p className="text-base font-extrabold text-emerald-700 animate-pulse">
-                It will be delivered in 2-3 hours.
+            <div className="my-2 rounded-xl bg-emerald-50 border border-emerald-200 py-2.5 px-4">
+              <p className="text-xs sm:text-sm font-extrabold text-emerald-700 animate-pulse">
+                Delivery in Progress (2-3 Hours)
               </p>
             </div>
 
-            <p className="text-xs text-slate-600 leading-relaxed font-medium mt-3">
-              Thank you! Your payment receipt has been successfully received and verified for <strong className="text-slate-800">{formData.studentName}</strong>. Your study kit will be delivered to your WhatsApp/Email within 2-3 hours.
+            {/* MANDATORY CHEAT SHEET DELIVERY EMAIL STEP IN POP-UP */}
+            <div className="my-4 rounded-xl bg-indigo-50 border-2 border-indigo-400 p-4 text-left space-y-2.5 shadow-sm">
+              <div className="flex items-center gap-2 text-indigo-950 font-extrabold text-xs uppercase tracking-wide">
+                <Mail className="h-4.5 w-4.5 text-indigo-600 shrink-0" />
+                <span>Mandatory Step for Cheat Sheet Delivery:</span>
+              </div>
+              <p className="text-xs text-indigo-900 leading-snug font-medium">
+                Please click the button below to send your autofilled order details to <strong className="font-extrabold underline text-indigo-950">acethegrade77@gmail.com</strong> so our team can send your digital cheat sheets immediately.
+              </p>
+              <a
+                href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent(`[AceTheGrade Cheat Sheet Request] ${formData.studentName} (${bookingCode})`)}&body=${encodeURIComponent(`Hello AceTheGrade Team,\n\nI have completed my order and payment for cheat sheet delivery.\n\nOrder Code: ${bookingCode}\nStudent Name: ${formData.studentName}\nClass: Class ${formData.selectedClass}th (${formData.board})\nTextbook: ${formData.selectedSubjectBookName}\nPhone: ${formData.parentPhone}\nEmail: ${formData.email}\nUPI Sender Name: ${upiName || '(Entered during payment)'}\nUTR Number: ${utr || '(Entered 12-digit UTR)'}\nTotal Paid: ₹${totalCost}\n\nPlease deliver my cheat sheets and digital study materials to my email.\n\nThank you!`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 py-3.5 px-4 text-xs font-black text-white shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <Mail className="h-4 w-4 text-indigo-200" />
+                <span>📧 Open Gmail to Send Details to acethegrade77@gmail.com</span>
+              </a>
+              <p className="text-[10px] text-indigo-700 font-medium text-center">
+                ✨ Your order details, student name, textbook, and payment UTR are automatically pre-filled in the email!
+              </p>
+            </div>
+
+            <p className="text-xs text-slate-600 leading-relaxed font-medium mt-2">
+              Thank you! Once you send your email to <strong>acethegrade77@gmail.com</strong>, your cheat sheet kit will be delivered to your WhatsApp/Email within 2-3 hours.
             </p>
 
             <button

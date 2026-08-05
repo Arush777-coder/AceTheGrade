@@ -37,13 +37,13 @@ export default function Header({ onOrderClick }: HeaderProps) {
           </span>
           <span className="hidden md:inline text-slate-600">|</span>
           <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Customer Care Inquiry')}`}
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=acethegrade77@gmail.com&su=${encodeURIComponent('AceTheGrade Cheat Sheet Delivery & Support Inquiry')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-heading text-slate-300 hover:text-blue-400 transition-colors"
+            className="flex items-center gap-1.5 font-heading text-slate-200 hover:text-blue-400 transition-colors"
           >
-            <Mail className="h-3.5 w-3.5 text-blue-400" />
-            <span>Customer Care: acethegrade77@gmail.com</span>
+            <Mail className="h-3.5 w-3.5 text-blue-400 shrink-0" />
+            <span>Cheat Sheet Delivery & Support: <strong className="text-blue-300 underline font-bold">acethegrade77@gmail.com</strong></span>
           </a>
         </div>
       </div>
