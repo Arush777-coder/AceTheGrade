@@ -533,7 +533,8 @@ const ALLOWED_KIT_IDS = new Set([
   'subject-9-biology',
   'subject-9-sanskrit',
   'c9-science',
-  'c9-english'
+  'c9-english',
+  'c9-hindi'
 ]);
 
 const rawKits: StudyKit[] = [
